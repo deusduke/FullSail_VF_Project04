@@ -185,6 +185,12 @@ function showAllProjects(force){
 	// if we are already viewing all projects, return
 	if (!force && document.getElementById('project_list').className != 'hide') return;
 
+	// if we don't have any projects to show, fill with default data
+	if (localStorage.length == 0) {
+		alert("No projects yet, filling with default data");
+		fillWithDefaultData();
+	}
+
 	projects = retrieveProjects();
 
 
