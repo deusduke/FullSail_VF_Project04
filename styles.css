@@ -1,0 +1,53 @@
+body {
+	color: #333;
+	background-color: #ccc;
+	margin: 0;
+}
+
+.hide
+{
+	display: none;
+}
+
+header {
+	background-color: gray;
+	padding: 10px;
+}
+
+header>h1 {
+	margin: 0;
+	text-align: center;
+}
+
+.content, #mainForm {
+	padding: 20px;
+}
+
+#delAll {
+	margin-left: 38px;
+}
+
+#showAll, #addNew {
+	margin-left: 20px;
+}
+
+.project_list_item {
+	background-color: #ddd;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.project_list_item>p {
+	margin-top: -11px;
+	padding: 0;
+}
+
+.hd_type {
+	margin-bottom: 5px;
+}
+
+.success_msg {
+	color: darkturquoise;
+	margin: 0 auto;
+	text-align: center;
+}

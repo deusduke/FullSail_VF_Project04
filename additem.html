@@ -1,0 +1,87 @@
+<!doctype html>
+<!--
+	Visual Frameworks Project 4
+	By: Deus Duke
+	Term:  1303
+-->
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<meta name="description" content="Free web app to help you manage your projects">
+		<meta name="keywords" content="Mobile,Project Management,Useful Tool,Full Sail">
+		<meta name="robots" content="index, nofollow">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="stylesheet" href="styles.css">
+		<script type="text/javascript" src="main.js"></script>
+
+		<title>Project List</title>
+	</head>
+	<body>
+		<header>
+			<h1>Project Tracker</h1>
+
+			<h4 id="message" class="hide"></h4>
+		</header>
+
+		<a id="delAll" href="#" onclick="clearAllProjects()">Delete All Projects</a>
+		<a id="showAll" href="#" onclick="showAllProjects()">Display Projects</a>
+		<a id="addNew" href="#" onclick="addNew()" class="hide">Add New Project</a>
+
+		<form id="mainForm" action="index.html">
+			<fieldset>
+				<legend>Project Details</legend>
+				<label for="projectName">Project Name</label>
+				<br>
+				<input id="projectName" name="projectName" type="text" />
+				<br>
+				<br>
+
+				<label for="startDate">Start Date</label>
+				<br>
+				<input id="startDate" name="startDate" type="date" />
+				<br>
+				<br>
+
+				<h4 class="hd_type">Type</h4>
+				<input id="internal" name="type" type="radio" value="internal" />
+				<label for="internal">Internal</label>
+				<br>
+
+				<input id="external" name="type" type="radio" value="external" />
+				<label for="external">External</label>
+				<br>
+
+				<input id="personal" name="type" type="radio" value="personal" />
+				<label for="personal">Personal</label>
+				<br>
+				<br>
+
+				<label for="priority">Priority</label>
+				<br/>
+				<input id="priority" name="priority" type="range" min="1" max="5"/>
+				<br>
+				<br>
+
+				<input id="confirm" type="button" value="Save Project" onclick="createProject()">
+				<br>
+			</fieldset>
+
+			<input type="hidden">
+		</form>
+
+		<div id='project_list' class="hide">
+			<!-- Used as a placed holder to inject projects into -->
+		</div>
+
+	<script type="text/javascript">
+		// show the success message if needed,
+		// added here to ensure page loaded
+		if (window.location.href.indexOf('success=true') > 0)
+		{
+			document.getElementById("message").innerHTML = "Your project was saved successfully!";
+		}
+	</script>
+
+	</body>
+</html>
