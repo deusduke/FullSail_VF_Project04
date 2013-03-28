@@ -8,15 +8,15 @@ var json = {
 	},
 	"project2": {
 		"id": "09237023570",
-		"name": "Cool Game",
-		"startDate": '03/25/2013',
+		"name": "Awesome Idea",
+		"startDate": '06/16/2013',
 		"type": "personal",
 		"priority": "2"
 	},
 	"project3": {
 		"id": "84720597435087",
-		"name": "Cool Game",
-		"startDate": '03/25/2013',
+		"name": "Amazing Application",
+		"startDate": '08/19/2013',
 		"type": "external",
 		"priority": "3"
 	}

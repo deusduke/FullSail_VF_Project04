@@ -186,7 +186,7 @@ function showAllProjects(force){
 	if (!force && document.getElementById('project_list').className != 'hide') return;
 
 	// if we don't have any projects to show, fill with default data
-	if (localStorage.length == 0) {
+	if (localStorage.length === 0) {
 		alert("No projects yet, filling with default data");
 		fillWithDefaultData();
 	}
@@ -289,4 +289,19 @@ function addNew() {
 
 	// restore the button
 	document.getElementById('confirm').value="Save Project";
+}
+
+// fill with default data
+function fillWithDefaultData() {
+	var defaultData = json;
+
+	// loop through data and add projects to local
+	// storage
+	for (var key in json) {
+		if (key == null) continue;
+		var p = json[key];
+		var data = JSON.stringify(json[key]);
+		console.log(data);
+		localStorage.setItem(p.id, data);
+	}
 }
