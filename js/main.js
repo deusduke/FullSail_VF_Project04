@@ -12,6 +12,7 @@ var currentProject = null;
 /*jshint multistr: true */
 var projectItemHtml = " \
 <div class='project_list_item'> \n\
+	<img width='50' src='images/icon-{2}.png'/> \n\
 	<h3>{0}</h3> \n\
 	<p>Start Date: {1}</p> \n\
 	<p>Type: {2}</p> \n\
