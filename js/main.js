@@ -16,7 +16,9 @@ var projectItemHtml = " \
 	<h3>{0}</h3> \n\
 	<p>Start Date: {1}</p> \n\
 	<p>Type: {2}</p> \n\
-	<p>priority: {3}</p> \n\
+	<p>Priority: {3}</p> \n\
+	<p>Details:</p> \n\
+	<p>{5}</p> \n\
 	<a href='#' onclick=editProject({4})>Edit Project</a> \n\
 	<br/> \n\
 	<a href='#' onclick='deleteProject({4})'>Delete Project</a> \n\
@@ -125,6 +127,8 @@ function createProject()
 
 	project.priority = document.getElementById('mainForm').priority.value;
 
+	project.details = document.getElementById('mainForm').details.value;
+
 	// store the date
 	storeProject(project);
 
@@ -210,7 +214,8 @@ function showAllProjects(force){
 										project.startDate,
 										project.type,
 										project.priority,
-										project.id);
+										project.id,
+										project.details);
 		projectListHtml += ('\n' + projectAsHtml);
 
 	}
@@ -253,6 +258,7 @@ function editProject(id)
 	document.getElementById('startDate').value=currentProject.startDate;
 	document.getElementById('priority').value=currentProject.priority;
 	document.getElementById(currentProject.type.toLowerCase()).checked=true;
+	document.getElementById('details').value=currentProject.details;
 
 	editMode = true;
 }
@@ -287,6 +293,7 @@ function addNew() {
 	document.getElementById('internal').checked = false;
 	document.getElementById('external').checked = false;
 	document.getElementById('personal').checked = false;
+	document.getElementById('details').value = "";
 
 	// restore the button
 	document.getElementById('confirm').value="Save Project";
