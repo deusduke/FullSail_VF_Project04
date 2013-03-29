@@ -93,6 +93,11 @@ input[type=text], input[type=date], input[type=button], input[type=range]  {
 	width: 95%;
 }
 
+textarea {
+	width: 95%;
+	min-height: 100px;
+}
+
 fieldset {
 	margin: 0;
 	padding: 5px;
